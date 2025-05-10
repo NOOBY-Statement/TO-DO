@@ -84,7 +84,7 @@ export default function TodoList() {
   // Filter todos based on search and priority filter
   const filteredTodos = todos.filter(todo => {
     const matchesSearch = todo.text.toLowerCase().includes(search.toLowerCase()) || 
-                         todo.description.toLowerCase().includes(search.toLowerCase());
+    todo.description.toLowerCase().includes(search.toLowerCase());
     const matchesPriority = activePriorityFilter === 'all' || todo.priority === activePriorityFilter;
     return matchesSearch && matchesPriority;
   });
